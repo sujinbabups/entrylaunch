@@ -16,7 +16,7 @@ View Application Status: Track the status of job
 
 **How to install**  
 
-git clone https://github.com/yourusername/job-board-platform.git   
+git clone https://github.com/sujinbabups/Project-Final.git  
 cd job-board-platform  
 To run  docker compose up --build  
 
