@@ -1,0 +1,174 @@
+
+/* Navbar heading style */
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    color: rgb(220, 223, 233);
+  }
+  
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+    color: rgb(15, 15, 224);
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+    color: rgb(5, 180, 93);
+  }
+}
+
+.slide-in1 {
+  display: inline-block;
+  animation: slideIn 3s infinite;
+}
+
+
+
+
+
+
+/* css for home page div */
+
+.animated-gradient-text {
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-animation 3s linear infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
+/* Define keyframes for sliding effect */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+/* Apply animation to the container */
+.scroll-container {
+  display: flex;
+  animation: slide linear infinite;
+  /* Adjust the speed here */
+  animation-duration: 10s;
+}
+
+.scroll-container:hover {
+  animation-play-state: paused;
+}
+
+/* style for recruiter page div */
+
+.recruiters-container {
+  width: 75%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: #f0f4f8; /* Light background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recruiters-boxes {
+  position: relative;
+  height: 300px; /* Adjust based on your design */
+}
+
+.recruiter-box {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, #3b3c3d, #707577); /* Gradient background */
+  border-radius: 10px;
+  border: 2px solid #ddd; /* Light border color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* White text for readability */
+}
+
+.recruiter-box.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.recruiter-box.slide-out {
+  opacity: 0;
+  transform: translateX(-300%);
+}
+
+.recruiter-box h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* White color for the name */
+  margin-bottom: 10px;
+}
+
+.recruiter-box p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #f0f0f0; /* Light color for other text */
+}
+
+.recruiter-box:hover {
+  background: linear-gradient(135deg, #7d8183, #48586d); /* Reverse gradient on hover */
+  border-color: #fff; /* White border on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+
+}
+
+
+/* Style for login alert */
+@keyframes reduceSize {
+  0% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+.message-animation {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(1.5);
+  background: linear-gradient(135deg, #1e8057, #9773d1);
+  color: white;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  
+  padding: 2rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+  animation: reduceSize 3s forwards;
+}
+
+
+

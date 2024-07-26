@@ -1,0 +1,57 @@
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.job-card-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.job-card {
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  animation: slideInTop 10s linear infinite;
+  animation-play-state: running;
+  margin-bottom: 10px; /* default margin */
+  transition: margin 0.3s ease-in-out, z-index 0.3s ease-in-out;
+}
+
+.job-card:hover {
+  animation-play-state: paused;
+  z-index: 10;
+  margin-bottom: 30px; /* increased margin on hover */
+}
+
+/* Animation for the name */
+
+@keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(2);
+      color: green;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+      color: white;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+      color: blue;
+    }
+  }
+  
+  .hi-animation {
+    animation: fadeInScale 3s ease-in-out infinite;
+  }
+  
