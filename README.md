@@ -25,7 +25,7 @@ To run  docker compose up --build
 ## Links
 **Demo Video** : https://drive.google.com/file/d/1U2dmfVoDMHAjlEjgdtU_mM8cdFer8apt/view?usp=sharing  
 **Work flow Diagram** : https://drive.google.com/file/d/1mQ9bXUN7o_PFpAOYphvNWiYBLzuwrR8w/view?usp=sharing  
-
+## Notes  
 for admin login use usermane and password as admin
 
 
