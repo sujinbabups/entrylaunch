@@ -1,11 +1,11 @@
 # Project-Final
 **EntryLaunch** is  a job board platform dedicated to fresh graduates and entry-level positions.   
 **Modules**  
-##**Admin**  
+## **Admin**  
 Add Employer: Add new employers to the platform.
 View Employers: View a list of all registered employers.
 Remove Employers: Remove employers from the platform.  
-*##*Employer**  
+## **Employer**  
 Add Job: Post new job listings.
 View Jobs: View and manage job listings.
 View Applications: View applications from employees.  
