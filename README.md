@@ -2,7 +2,7 @@
 **EntryLaunch** is  a job board platform dedicated to fresh graduates and entry-level positions.   
 
     
-###**Modules**  
+### **Modules**  
 ## **Admin**  
 Add Employer: Add new employers to the platform.
 View Employers: View a list of all registered employers.
