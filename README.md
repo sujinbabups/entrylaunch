@@ -9,7 +9,7 @@ Remove Employers: Remove employers from the platform.
 Add Job: Post new job listings.
 View Jobs: View and manage job listings.
 View Applications: View applications from employees.  
-##**Employee**  
+## **Employee**  
 Update Profile: Update personal information and resume.
 Apply for Jobs: Apply for job listings directly from the home page.
 View Application Status: Track the status of job   
