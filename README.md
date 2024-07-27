@@ -21,7 +21,8 @@ View Application Status: Track the status of job
 
 git clone https://github.com/sujinbabups/Project-Final.git  
 cd job-board-platform  
-To run  docker compose up --build  
+## To run 
+docker compose up --build  
 
 
 ## Links
