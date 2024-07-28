@@ -28,7 +28,7 @@ const AdminviewEmployer = () => {
   
 
   return (
-    <div className="viewEmployer bg-gradient-to-r from-blue-700 to-blue-300 h-[440px] mt-12 w-[70%] rounded-lg">
+    <div className="viewEmployer bg-gradient-to-r from-blue-700 to-blue-300 h-[440px] mt-12 w-[70%] rounded-lg overflow-scroll">
       <h2 className="text-2xl font-sans mt-8 ml-10 text-white font-bold">View Employers</h2>
       <table className="mt-8 ml-[20%] w-90 mx-auto">
         <thead>

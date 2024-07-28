@@ -35,7 +35,7 @@ const Recruiters = () => {
   return (
     <>
       <div className="h-[450px] w-3/4 max-w-3xl p-4 bg-white rounded-2xl m-auto mt-[-860px]">
-        <h2 className="text-3xl font-bold font-serif ml-[38%]">Ur Recruiters</h2>
+        <h2 className="text-3xl font-bold font-serif ml-[38%]">Our Recruiters</h2>
         <div className="h-[250px] w-3/4 bg-gradient-to-t to-gray-400 m-auto rounded-lg">
           <div className="recruiters-boxes">
             {recruiters.map((recruiter, index) => (

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const adminCollection = require("../models/admin");
@@ -5,9 +6,13 @@ const employerSchema=require('../models/employer')
 
 const appJobs=require('../models/appliedjobs')
 
+const nodemailer = require('nodemailer');
+
+
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const verifyfyToken =require('../middleware/tokenAuth')
+
 
 router.post('/admin-login', async (req, res) => {
     const { username, password } = req.body;
@@ -47,30 +52,55 @@ router.get("/logout", (req, res) => {
 
 // adding employer
 
-router.post('/add-employer',verifyfyToken, async (req, res) => {
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+
+router.post('/add-employer', verifyfyToken, async (req, res) => {
     try {
-        const { Emp_Id, co_name, type, place, email, password } = req.body;
-
-        // Hash the password
-        const saltRounds = 10; // You can adjust the number of salt rounds
-        const hashedPassword = await bcrypt.hash(password, saltRounds);
-
-        const new_emp = new employerSchema({
-            Emp_Id,
-            co_name,
-            type,
-            place,
-            email,
-            password: hashedPassword, // Save the hashed password
-        });
-
-        await new_emp.save();
-        res.status(201).json({ message: "Added new employer" });
+      const { Emp_Id, co_name, type, place, email, password } = req.body;
+  
+      const saltRounds = 10;
+      const hashedPassword = await bcrypt.hash(password, saltRounds);
+  
+      const new_emp = new employerSchema({
+        Emp_Id,
+        co_name,
+        type,
+        place,
+        email,
+        password: hashedPassword,
+      });
+  
+      await new_emp.save();
+  
+      const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: email,
+        subject: 'Your Employer Account Details',
+        text: ` Hello Employer welcome to Entrylaunch. Your account has been created with the following details:
+        - Employer ID: ${Emp_Id}
+        - Company Name: ${co_name}
+        - Place: ${place}
+        - Type of Company: ${type}
+        - Email: ${email}
+        - Password: ${password}
+Login to your profile using this email id and password`,
+      };
+  
+      await transporter.sendMail(mailOptions);
+  
+      res.status(201).json({ message: 'Added new employer and email sent.' });
     } catch (error) {
-        console.log(error);
-        res.status(500).json({ message: "Server error" });
+      console.log(error);
+      res.status(500).json({ message: 'Server error' });
     }
-});
+  });
 // view employer
 
 router.get('/get-employers',verifyfyToken, async (req, res) => {
