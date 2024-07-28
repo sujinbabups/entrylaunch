@@ -34,7 +34,7 @@ const AdminviewEmployer = () => {
         <thead>
           <tr>
             <th className="bg-purple-900 text-white h-12 w-[100px]">EmpID</th>
-            <th className="bg-purple-900 text-white h-12 w-[150px]">Co.Name</th>
+            <th className="bg-purple-900 text-white h-12 w-[350px]">Co.Name</th>
             <th className="bg-purple-900 text-white h-12 w-[130px]">Place</th>
            
           </tr>
