@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express = require("express");
 const router = express.Router();
 const adminCollection = require("../models/admin");
@@ -52,11 +52,13 @@ router.get("/logout", (req, res) => {
 
 // adding employer
 
+const EMAIL_USER="entrylaunchjobportal@gmail.com"
+const EMAIL_PASS="zihc aueq stet lpvt"
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
+      user:EMAIL_USER,
+      pass: EMAIL_PASS,
     },
   });
 

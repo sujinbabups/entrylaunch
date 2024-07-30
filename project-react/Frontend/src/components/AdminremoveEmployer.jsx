@@ -65,7 +65,7 @@ const AdminremoveEmployer = () => {
             <thead>
               <tr>
                 <th className="bg-purple-900 text-white h-12 w-[130px]">EmpID</th>
-                <th className="bg-purple-900 text-white h-12 w-[200px]">Co.Name</th>
+                <th className="bg-purple-900 text-white h-12 w-[300px]">Co.Name</th>
               </tr>
             </thead>
            
