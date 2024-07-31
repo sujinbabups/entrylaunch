@@ -20,12 +20,10 @@ const Adminlogin = ({show,handleClose}) => {
             },
             body: JSON.stringify(loginDetails),
           });
-          console.log(res, "login res from /login");
+          // console.log(res, "login res from /login");
           if (res.ok) {
             // console.log('/login resp json', data)
             const data = await res.json();
-            const userType = data.userType;
-            console.log('usertype ', userType)
             toast.success(`Logged in success`);
             return navigate("/admin");
       

@@ -9,7 +9,7 @@ services:
     volumes:
       - mongo_volume:/data/db
   api:
-    image: apiel
+    image: apielnch
     depends_on:
       - mongodb
     build: 

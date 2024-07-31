@@ -107,7 +107,7 @@ const CandidteHome = () => {
         {jobs.map((job) => {
           const isApplied = appliedJobs.find(application => application.job_id === job.job_id);
           return (
-            <div key={job.job_id} className="job-card p-4 m-2 w-[65%] rounded-lg shadow-md text-white  bg-gradient-to-r from-green-500 to-blue-800 border-2" >
+            <div key={job.job_id} className=" p-4 m-2 w-[65%] rounded-lg shadow-md text-white  bg-gradient-to-r from-green-500 to-blue-800 border-2" >
               <h3 className="text-xl font-bold mb-2">{job.job_name}</h3>
               <hr />
               <p><strong>ID:</strong> {job.job_id}</p>

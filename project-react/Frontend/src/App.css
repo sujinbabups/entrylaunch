@@ -5,18 +5,18 @@
   0% {
     transform: translateX(-100%);
     opacity: 0;
-    color: rgb(220, 223, 233);
+    color: rgb(16, 240, 83);
   }
   
   50% {
     transform: translateX(0);
     opacity: 1;
-    color: rgb(15, 15, 224);
+    color:rgb(38, 0, 128);
   }
   100% {
     transform: translateX(100%);
     opacity: 0;
-    color: rgb(5, 180, 93);
+    color: rgb(174, 5, 180);
   }
 }
 
@@ -33,7 +33,7 @@
 /* css for home page div */
 
 .animated-gradient-text {
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(90deg, rgb(235, 46, 46), orange, yellow, green, blue, rgb(180, 111, 230), rgb(238, 20, 238),white,purple);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
@@ -70,6 +70,7 @@
 
 .scroll-container:hover {
   animation-play-state: paused;
+  
 }
 
 /* style for recruiter page div */
@@ -93,7 +94,7 @@
   width: 100%;
   height: 100%;
   padding: 20px;
-  background: linear-gradient(135deg, #3b3c3d, #707577); /* Gradient background */
+  background: linear-gradient(135deg, #e2e602, #6e81b6); /* Gradient background */
   border-radius: 10px;
   border: 2px solid #ddd; /* Light border color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -109,12 +110,12 @@
 
 .recruiter-box.slide-in {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(2);
 }
 
 .recruiter-box.slide-out {
-  opacity: 0;
-  transform: translateX(-300%);
+  opacity: .2;
+  transform: translateX(-200%);
 }
 
 .recruiter-box h3 {
@@ -131,7 +132,7 @@
 }
 
 .recruiter-box:hover {
-  background: linear-gradient(135deg, #7d8183, #48586d); /* Reverse gradient on hover */
+  background: linear-gradient(135deg, #38a152, #2355dd); 
   border-color: #fff; /* White border on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 
@@ -145,11 +146,12 @@
     opacity: 1;
   }
   50% {
-    transform: scale(2);
+    transform: scale(3);
     opacity: 1;
   }
+  
   100% {
-    transform: scale(6);
+    transform: scale(2);
     opacity: 0;
   }
 }
@@ -159,7 +161,7 @@
   top: 2rem;
   left: 50%;
   transform: translateX(-50%) scale(1.5);
-  background: linear-gradient(135deg, #1e8057, #9773d1);
+  background: linear-gradient(135deg, #1e7180, #8450d8);
   color: white;
   font-weight: bold;
   font-family:Georgia, 'Times New Roman', Times, serif;

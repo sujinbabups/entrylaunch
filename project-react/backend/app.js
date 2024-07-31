@@ -32,7 +32,7 @@ const PORT = 5001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-mongoose.connect("mongodb://mongodb:27017/EntryLaunch-React");
+mongoose.connect("mongodb://mongodb:27017/EntryLaunch-React1");
 
 const database = mongoose.connection;
 

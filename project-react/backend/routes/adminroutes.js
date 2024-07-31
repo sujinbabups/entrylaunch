@@ -42,6 +42,32 @@ router.post('/admin-login', async (req, res) => {
     }
 });
 
+router.post('/admin-register', async (req, res) => {
+    const { username, password } = req.body;
+    try {
+        // Check if the username already exists
+        const existingAdmin = await adminCollection.findOne({ username });
+        if (existingAdmin) {
+            return res.status(400).json({ message: 'Username already taken' });
+        }
+
+        // Hash the password
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Create and save the new admin to the collection
+        const newAdmin = await adminCollection.create({
+            username,
+            password: hashedPassword,
+        });
+
+        res.status(201).json({ message: 'Registration Success', admin: newAdmin });
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
 
 
 router.get("/logout", (req, res) => {

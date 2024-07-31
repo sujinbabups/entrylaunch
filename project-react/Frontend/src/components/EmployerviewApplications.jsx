@@ -52,29 +52,29 @@ const EmployerviewApplications = () => {
   };
 
   const handleActionChange = async (applicationId, action) => {
-    try {
-      const response = await fetch(`/api/applications/${applicationId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ action }),
-      });
+  try {
+    const response = await fetch(`/api/applications/${applicationId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ action }),
+    });
 
-      if (response.ok) {
-        window.confirm(`${action} candidate`);
-        setApplications((prevApplications) =>
-          prevApplications.map((app) =>
-            app._id === applicationId ? { ...app, action } : app
-          )
-        );
-      } else {
-        console.error('Failed to update application action');
-      }
-    } catch (error) {
-      console.error('Error:', error);
+    if (response.ok) {
+      window.confirm(`${action} candidate`);
+      setApplications((prevApplications) =>
+        prevApplications.map((app) =>
+          app._id === applicationId ? { ...app, action } : app
+        )
+      );
+    } else {
+      console.error('Failed to update application action');
     }
-  };
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
 
   return (
     <div className="rounded-2xl bg-gradient-to-r from-green-600 to-blue-400 w-[84%] ml-[2%] mt-[2%] h-[500px] border-2 border-white" id="vwapp">

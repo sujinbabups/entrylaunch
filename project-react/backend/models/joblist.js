@@ -7,7 +7,7 @@ const demo=new Schema({
     location:{type:String,required:true},
     skills:{type:String,required:true},
     date:{type:String,required:true},
-    postedBy: { type: String, ref: 'Employer', required: true }
+    postedBy: { type: String,required: true }
 
 
 })

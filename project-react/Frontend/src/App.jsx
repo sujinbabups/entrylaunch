@@ -9,6 +9,7 @@ import Employerlayout from './Layouts/Employerlayout'
 import Adminlayout from './Layouts/Adminlayout'
 import Candidatelogin from './components/Candidatelogin'
 import Candidateregister from './components/Candidateregister'
+import PagenotFound from './pages/PagenotFound'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     createRoutesFromElements(
       <>
       <Route path='/' element={<Firstlayout/>}>
+      <Route path='/*' element={<PagenotFound/>}/>
       <Route index element={<Homepage/>}/>
       <Route path='/recruiters' element={<Recruiters/>}/>
       <Route path='/contact' element={<Contactus/>}/>

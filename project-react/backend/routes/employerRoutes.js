@@ -106,7 +106,6 @@ router.get('/get-employer', authenticateToken, async (req, res) => {
     try {
       const empmail = req.user.email;
   
-      // Fetch the jobs posted by the logged-in employer
       const jobs = await jobSchema.find({ postedBy: empmail });
   
       if (!jobs.length) {
@@ -172,7 +171,7 @@ router.get('/get-employer', authenticateToken, async (req, res) => {
 
   // select or reject the application
 
-  router.put('/applications/:id', authenticateToken, async (req, res) => {
+  router.patch('/applications/:id', authenticateToken, async (req, res) => {
     const { id } = req.params;
     const { action } = req.body;
   
