@@ -1,6 +1,6 @@
 # Project-Final
 
-**EntryLaunch** is a job board platform dedicated to fresh graduates and entry-level positions.
+**EntryLaunch 🚀** is a job board platform dedicated to fresh graduates and entry-level positions.
 
 ## Modules
 
@@ -19,7 +19,7 @@
 - Apply for Jobs: Apply for job listings directly from the home page.
 - View Application Status: Track the status of job applications.
 
-## How to install
+## How to install 
 
 ```bash
 git clone https://github.com/sujinbabups/Project-Final.git
@@ -28,8 +28,8 @@ docker compose up --build
 ```
 
 
-## Links
+## Links 🔗
 **Demo Video** : https://drive.google.com/file/d/1U2dmfVoDMHAjlEjgdtU_mM8cdFer8apt/view?usp=sharing  
 **Work flow Diagram** : https://drive.google.com/file/d/1mQ9bXUN7o_PFpAOYphvNWiYBLzuwrR8w/view?usp=sharing  
-## Notes  
+## Notes  📝
 for admin login use username and password as admin
