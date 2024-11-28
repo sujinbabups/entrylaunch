@@ -1,4 +1,4 @@
-# Project-Final
+# Project-Fin
 
 **EntryLaunch 🚀** is a job board platform dedicated to fresh graduates and entry-level positions.
 ## Demo Video 📹
